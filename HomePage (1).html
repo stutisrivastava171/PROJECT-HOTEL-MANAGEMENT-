@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../J%20Component/J%20Component_iwp/extra.css">
+
+    <style>
+        body {margin:0;font-family:Arial}
+        /*Navigation bar for the website*/
+        .topnav {
+            overflow: hidden;
+            background-color: #1c18de;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 22px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        /*Css for the dropdown and it's sub classes*/
+
+        .dropdown {
+            float: right;
+            color: black;
+            overflow: hidden;
+            padding-right: 20px;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 17px;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 22px 10px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #add8e6;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 20px;
+            margin-right: -200px
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .topnav a:hover, .dropdown:hover .dropbtn {
+            background-color: #add8e6;
+            color: white;
+        }
+
+        /*When you hover over dropdown this will happen*/
+        .dropdown-content a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /*Again a media query*/
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child), .dropdown .dropbtn {
+                display: none;
+            }
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        /*Media queries are for responsiveness basically we're desc a width size for the each screen*/
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {position: relative;}
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            .topnav.responsive .dropdown {float: none;}
+            .topnav.responsive .dropdown-content {position: relative;}
+            .topnav.responsive .dropdown .dropbtn {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        /*For header image*/
+        .HeaderImg{
+            background-image: url("Hotel1.jpg");
+            background-position: center;
+            background-size: cover;
+            padding-top: 600px;
+            background-repeat: no-repeat;
+        }
+
+        /*CSS for Search bar calling by input*/
+        .topnav input[type=text]
+        {
+            float: right;
+            padding-right: -80px;
+            padding-top: 5px;
+            padding-left: 10px;
+            padding-bottom: 5px;
+            background-color: #add8e6;
+            border: 2px solid black;
+            margin-top:16px;
+            color: black;
+            margin-left: 20px;
+            margin-right: 10px;
+            font-size: 17px;
+        }
+
+        /*Styling Placeholder For Search bar*/
+        ::placeholder{
+            color: black;
+            text-align: left;
+            font-family: Arial;
+        }
+
+        /*CSS For the Gallery Please make the gallery responsive*/
+        .GalleryMain{
+            padding-top: 40px;
+            padding-bottom: 3px;
+            margin: 100x;
+        }
+        .GalleryMain h1{
+            text-align: center;
+            font-weight: 500;
+        }
+
+        div.gallery {
+            margin-top: 40px;
+            margin-left: 150px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 3px;
+        }
+
+        /*When you hover over the gallery border will occur*/
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .AboutUsMain h1{
+            text-align: center;
+            font-weight: 500;
+            font-size: 30px;
+            padding-top: 30px;
+
+        }
+
+        .AboutUsContent{
+            padding-top: 5px;
+            padding-left: 90px;
+            padding-right: 90px;
+            padding-bottom: 40px;
+            margin-right: 10em;
+            margin-left: 10em;
+            display: block;
+            line-height: 1.5;
+            justify-content: center;
+	    background-color:#add8e6;
+        }
+
+        .AboutUsContent p{
+            font-size: 20px;
+        }
+
+        .AboutUsSubContent1{
+            padding-top: 40px;
+            padding-left: 80px;
+            padding-right: 80px;
+            padding-bottom: 15px;
+            margin-right: 10em;
+            margin-left: 10em;
+        }
+
+        .AboutUsSubContent1 h3{
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .AboutUsSubContent1 P{
+            font-size: 30px;
+            padding-top:1px;
+        }
+
+        .AboutUsSubContent2 h3{
+	    padding-top:5px;
+            font-size: 22px;
+        }
+
+        .AboutUsSubContent2 P{
+            font-size: 20px;
+        }
+
+        #photos {
+            opacity: .88;
+            margin-bottom: 100px;
+            padding-top: 80px;
+            padding-bottom: 500px;
+        }
+
+        #photos img {
+            width: 30%;
+            float: left;
+            display: block;
+            margin: 4px;
+        }
+        footer{
+	background-color:black;
+	padding:10px;
+	color:white;
+	text-align:center;
+	}
+
+        ol {
+            list-style: none;
+            margin: 0px auto;
+            padding: 10px;
+            display: block;
+            max-width: 780px;
+            text-align: center;
+        }
+
+        #overlay {
+            background: rgba(0,0,0, .8);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            text-align: center;
+        }
+
+        #overlay img {
+            margin: 10% auto 0;
+            width: 770px;
+            border-radius: 5px;
+        }
+
+        #photos {
+            width: 100%;
+        }
+
+        #photo-gallery {
+            width: 100%;
+
+        }
+
+        .GalleryHeading{
+            text-align: center;
+            font-weight: 500;
+            font-size: 34px;
+            padding-top: 0px;
+            padding-bottom: 5px;
+        }
+
+
+.page-headings
+{
+    text-align: center;
+    color: rgb(5,38,55);
+    font-size: 30px;
+    font-family: arial;
+    font-weight: bold;
+    margin-top: 100px;
+}
+.animated-imgs
+{
+
+    height: 90px;
+    /*overflow: hidden; */
+    margin-left: 25%;
+}
+
+.how-it-works
+{
+    background-color: rgb(233,233,233);
+    padding:35px;
+    height: 280px;
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+.three-child-divs1
+{
+    width: 380px;
+    height: auto;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    float: left;
+}
+.three-child-divs2
+{
+    width: 380px;
+    height: auto;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    float:left;
+}
+.three-child-divs3
+{
+    width: 380px;
+    height: auto;
+    margin-left: 10px;
+    margin-bottom: 70px;
+    float: right;
+}
+.small-headings
+{
+    color: rgb(5,38,55);
+    font-size: 17px;
+    font-family: arial;
+    font-weight: bold;
+}
+.page-texts
+{
+    text-align: center;
+    color: rgb(5,38,55);
+    font-size: 15px;
+    font-family: arial;
+    margin-top: 10px;
+}
+.hover-for-contactus
+{
+    color: blue;
+    text-decoration: none;
+
+}
+.hover-for-contactus:hover
+{
+    background-color: none;
+    color:rgb(5,38,55);
+}
+
+/* Slideshow container */
+.slideshow-container {
+
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .close1 {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close1:hover,
+        .close1:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .close2 {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close2:hover,
+        .close2:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<!--Navigation bar-->
+<div class="topnav" id="myTopnav">
+    <a href="C:\Users\Stuti\Desktop\IWP2\HomePage (1).html"><b>HOME</b></a>
+    <a href="#AboutPage"><b>ABOUT</b></a>
+    <a href="#GalleryPage"><b>GALLERY</b></a>
+    <a href="C:\Users\Stuti\Desktop\IWP2\contact.html"><b>CONTACT</b></a>
+    <input type="text" placeholder="Search More" >
+    <a href="C:\Users\Stuti\Desktop\IWP2\search.html"><b>SEARCH</b></a>
+    <div class="dropdown">
+        <button class="dropbtn"><b>LOGIN/REGISTER</b>
+
+        </button>
+        <div class="dropdown-content">
+            <a href="C:\Users\Stuti\Desktop\IWP2\Login_Page.html"><b>CUSTOMER</b></a>
+            <a href="C:\Users\Stuti\Desktop\IWP2\Admin_Login.html"><b>ADMIN</b></a>
+        </div>
+    </div>
+    <!--Calling myFunction function from the javascript which invokes burger menu when you minimize the screen -->
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<!--For Header Image-->
+<header>
+<div CLASS="HeaderImg">
+</div>
+</header>
+
+<section id="AboutPage">
+    <div class="AboutUsMain">
+        <h1><b><u>ABOUT US</u></b></h1>
+        <div>
+            <div class="AboutUsContent">
+                <p>The Sky Website helps the customer to hire best hotel in best price. its's approx 72+ countries spread across the world. We have many years of experience,extensive conference facilities. We've prefered the art of reviving old,worn down properties,and injecting them with new SKYstyle. </p>
+               <div class="AboutUsSubContent1">
+                   <ul style="list-style-type:disc;"><b><u><font face="arial">Surprisingly Unordinary</u></b></ul>
+<li> Wherever you go,stay at a space with a curated experience at a price you won't believe.  Best in class efficiency.Zero hassle every time..
+Reserve a Room in person at one of our well-desinged spaces or use our app to book in 3 easy steps.</li></font> </pre></div>
+        </div>
+    </div>
+    </div>
+</section>
+
+    <div>
+        <p class="page-headings">HOW IT WORKS</p>
+    </div>
+
+    <div class="how-it-works">
+        <div class="three-child-divs1">
+            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="../J%20Component/J%20Component_iwp/animated1.jpg" class="animated-imgs">
+            <br>
+
+            <p><span class="small-headings" style="margin-left: 80px;"> &nbsp&nbsp&nbsp&nbspHELP</span></p>
+            <p><span class="page-texts">Browse through our list of variety of rooms <span style="margin-left: 10%">available. Still confused
+                <a  id="myBtn" class="hover-for-contactus">Contact Us</a>.</span></p>
+        </div>
+
+        <div class="three-child-divs2">
+            <img  onmouseover="bigImg(this) " onmouseout="normalImg(this)" src="../J%20Component/J%20Component_iwp/animated2.jpg" class="animated-imgs">
+
+            <br>
+
+            <p ><span  class="small-headings" style="margin-left: 100px;">Book Your Room</span></p>
+            <p><span class="page-texts" style="margin-left: 10%">Come and book your room and make it<span style="margin-left: 35%"> yours
+             <a id="bookBtn" class="hover-for-contactus">Book here</a>.</span></p></span>.</span></p>
+        </div>
+
+        <div class="three-child-divs3">
+            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="../J%20Component/J%20Component_iwp/images/animated3.jpg" class="animated-imgs">
+            <br>
+
+            <p><span class="small-headings" style="margin-left: 100px;">Complete your Payments</span></p>
+            <p><span class="page-texts">It is time to relax since you you booked your room <span style="margin-left: 30%"> in a snap. 
+             <a href="C:\Users\Stuti\Desktop\IWP2\payment.html" id="payBtn" class="hover-for-contactus">Pay here</a>.</span></p></span></p>
+        </div>
+    </div>
+
+
+
+
+
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div id="GalleryPage" class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="C:\Users\Stuti\Desktop\IWP2\hotel-room-2560x1600-006.jpg" style="width:100%">
+    <div class="text"><B><U><FONT COLOR="BLACK">VALUABLE PRICE</FONT></U></B></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="C:\Users\Stuti\Desktop\IWP2\homepage7.jpg" style="width:100%">
+    <div class="text"><B><U><FONT COLOR="BLACK">BEST FACILITIES</FONT></U></B></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="C:\Users\Stuti\Desktop\IWP2\hotelll.jpg" style="width:100%">
+    <div class="text"><B><U><FONT COLOR="BLACK">EASY COMFORT</FONT></U></B></div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div><!-- footer -->
+<footer>
+All Rights Reserved @
+</footer>
+<!-- end of footer -->
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>contact us soon</p>
+    </div>
+</div>
+
+<div id="bookModal" class="modal">
+    <div class="modal-content">
+        <span class="close1">&times;</span>
+        <p>HURRY UP!BOOK THE ROOM</p>
+    </div>
+</div>
+
+<div id="payModal" class="modal">
+    <div class="modal-content">
+        <span class="close2">&times;</span>
+        <p>Some Random text</p>
+    </div>
+</div>
+
+<!--Close Modals-->
+
+<!--Javascript Function which works when minimize or change the size of the screen.-->
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+
+    function bigImg(x) {
+        x.style.height = "190px";
+        x.style.width = "190px";
+
+    }
+
+    function normalImg(x) {
+        x.style.height = "100px";
+        x.style.width = "120px";
+    }
+
+    //MODAL USING DOM
+    const modal = document.getElementById("myModal");
+    const btn = document.getElementById("myBtn");
+    const span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal(pop-up)
+    btn.onclick = function() {
+        modal.style.display = "block";
+    };
+    span.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+
+        }
+    };
+
+    const book = document.getElementById("bookModal");
+    const btn1 = document.getElementById("bookBtn");
+    const bookClose = document.getElementsByClassName("close1")[0];
+
+    btn1.onclick = function () {
+        book.style.display = "block";
+    };
+
+    bookClose.onclick = function () {
+        book.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+        if(event.target == book){
+            book.style.display = "none";
+        }
+    };
+
+    const pay = document.getElementById("payModal");
+    const btn2 = document.getElementById('payBtn');
+    const payClose = document.getElementsByClassName("close2")[0];
+
+    btn2.onclick = function () {
+        pay.style.display = "block";
+    };
+
+    payClose.onclick = function () {
+        pay.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+        if(event.target == pay){
+            pay.style.display = "none";
+        }
+    };
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

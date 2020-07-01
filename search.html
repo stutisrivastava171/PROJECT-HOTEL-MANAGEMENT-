@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>search page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Search Page">
+  	<meta name="keywords" content="HTML,CSS">
+  	<meta name="author" content="Karan Khayani">
+	<style type="text/css">
+		body
+		{
+			padding: 0px;
+			margin: 0px;
+			font-family: Arial;
+			text-decoration: none;
+		}
+		#header
+		{
+			background-color: white;
+			padding: 10px;
+			overflow: auto;
+			display: block;
+			position: sticky;
+			width: auto;
+			box-shadow: 5px 5px 10px rgb(0,0,0,10);
+		}
+		.parent-main
+		{
+			background-color: rgb(233,233,233);
+			width: 930px;
+			margin-top:10px;
+			margin-left:auto;
+			margin-right: auto;
+			padding:20px;height: auto;
+			overflow: auto;
+			/*border-bottom: 1px solid;
+			border-color: rgb(0,0,0,10);
+			box-shadow: 5px 5px 10px rgb(0,0,0,10);*/
+		}
+		.two-child-divs
+			{
+			width: 400px;
+			height: auto;
+			margin-left: 30px;
+			padding: 10px;
+			float: left;
+			margin: 0px 10px;
+			}
+		.small-imgs
+			{
+			height: 265px;
+			width: 400px;
+			box-shadow: 5px 5px 10px rgb(0,0,0,10);
+			}
+		.left-child-child-div
+			{
+				/*border-right: 2px solid;
+				border-color: rgb(3,127,187);*/
+				width: 280px;
+				/*float: left;*/
+				/*background-color: red;*/
+			}
+		/*.right-child-child-div
+			{
+				width: 180px;
+				float: right;
+			}*/
+		.page-headings
+			{
+				/*background-color: pink;*/
+				text-align: center;
+				color: rgb(5,38,55);
+				font-size: 20px;
+				font-family: arial;
+				font-weight: bold;
+				margin-top: 0px;
+			}
+		.text-inside
+			{
+				color: rgb(5,38,55);
+				font-size: 17px;
+				font-family: arial;
+				/*font-weigh6t: bold;*/
+				margin-left: 30px;
+				/*background-color: blue;*/
+
+			}
+			.button
+			{
+			  background-color: #4CAF50; /* Green */
+			  color: white;
+			  padding: 15px 32px;
+			  text-align: center;
+			  text-decoration: none;
+			  display: inline-block;
+			  font-size: 16px;
+			  margin: 4px 60%;
+			  cursor: pointer;
+			}
+
+			.button1
+			{
+				background-color: white; 
+				color: black; 
+				border: 2px solid #1c18de;
+			}
+			.button1:hover
+			{
+				background-color: #1c18de;
+			}
+			hr
+			{
+				border-bottom: 1px solid rgb(232,232,232);
+				box-shadow: 2px 2px 10px rgb(0,0,0,10);
+				margin-right: 10%;
+				margin-left: 10%;
+				margin-top: 10px;
+			}
+			@media only screen and (max-width: 600px) {
+  				parent-div
+  				{
+			   		width: 400px;
+				}
+			}
+		</style>
+</head>
+<body>
+<form action="C:/Users/Stuti/Desktop/IWP2/book.html">
+	<div id="header"><!--HEADER PART-->
+		
+		<a href="#"><p style="float: right;color: black;">&nbsp;&nbsp;&nbsp;Welcome, User</p><img src="C:\Users\Stuti\Desktop\IWP2\img_avatar.png" height="50px" width="50px" style="float: right;"></a>
+		<button style="float: right;margin-right: 20px;margin-top: 20px;font-size: 17px" >Click here</button>
+		<input type="text" placeholder="Search here" name="search" style="float: right;margin-right: 8px;margin-top: 20px;width: 300px;height: 20px">
+	</div>
+										<!--HOTEL ONE-->
+	<div class="parent-main">
+		<div class="two-child-divs">
+				<img src="C:\Users\Stuti\Desktop\IWP2\r1.jpg" class="small-imgs">
+		</div>
+		<div class="two-child-divs">
+			<p class="page-headings"><u>SKY 49048 Jayanthi Tower</u></p>
+				<div class="left-child-child-div">
+					<p class="text-inside">City : Vellore</p>
+					<p class="text-inside">Pin code: 632014</p>
+					<p class="text-inside">Country: India</p>
+					<p class="text-inside">(296 Ratings) . Good</p>
+					<p class="text-inside">Attached Bathroom&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daily Housekeeping</p>
+					<p class="text-inside">CCTV Cameras&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+5 more</p>
+					<p class="text-inside">Rs. 565 per room per night</p>
+					<input type="submit" value="Book Now" name="Book Now" class="button button1">
+				</div>
+		</div>
+	</div>
+	<hr>
+											<!--HOTEL TWO-->
+	<div class="parent-main">
+		<div class="two-child-divs">
+				<img src="C:\Users\Stuti\Desktop\IWP2\r2.jpg" class="small-imgs">
+		</div>
+		<div class="two-child-divs">
+			<p class="page-headings"><u>SKY 60407 Ramachandra Residency</u></p>
+				<div class="left-child-child-div">
+					<p class="text-inside">City : Vellore</p>
+					<p class="text-inside">Pin code: 632014</p>
+					<p class="text-inside">Country: India</p>
+					<p class="text-inside">(151 Ratings) . Fair</p>
+					<p class="text-inside">Attached Bathroom&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parking Facility</p>
+					<p class="text-inside">CCTV Cameras&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+5 more</p>
+					<p class="text-inside">Rs. 770 per room per night</p>
+					<input type="submit" value="Book Now" name="Book Now" class="button button1">
+				</div>
+		</div>
+	</div>
+	<hr>
+												<!--HOTEL 3-->
+	<div class="parent-main">
+		<div class="two-child-divs">
+				<img src="C:\Users\Stuti\Desktop\IWP2\r3.jpg" class="small-imgs">
+		</div>
+		<div class="two-child-divs">
+			<p class="page-headings"><u>SKY SPOT ON 63619 Dd Mansion SPOT</u></p>
+				<div class="left-child-child-div">
+					<p class="text-inside">City : Vellore</p>
+					<p class="text-inside">Pin code: 632014</p>
+					<p class="text-inside">Country: India</p>
+					<p class="text-inside">(31 Ratings) . Very Good</p>
+					<p class="text-inside">Attached Bathroom&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parking Facility</p>
+					<p class="text-inside">CCTV Cameras&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+5 more</p>
+					<p class="text-inside">Rs. 1000 per room per night</p>
+					<input type="submit" value="Book Now" name="Book Now" class="button button1">
+				</div>
+		</div>
+	</div>
+	<hr>
+												<!--HOTEL 4-->
+	<div class="parent-main">
+		<div class="two-child-divs">
+				<img src="C:\Users\Stuti\Desktop\IWP2\r4.jpg" class="small-imgs">
+		</div>
+		<div class="two-child-divs">
+			<p class="page-headings"><u>SKY 46415 Kmr Lodge Saver</u></p>
+				<div class="left-child-child-div">
+					<p class="text-inside">City : Vellore</p>
+					<p class="text-inside">Pin code: 632014</p>
+					<p class="text-inside">Country: India</p>
+					<p class="text-inside">(95 Ratings) . Good</p>
+					<p class="text-inside">Attached Bathroom&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Swimming Pool</p>
+					<p class="text-inside">CCTV Cameras&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+5 more</p>
+					<p class="text-inside">Rs. 560 per room per night</p>
+					<input type="submit" value="Book Now" name="Book Now" class="button button1">
+				</div>
+		</div>
+	</div>
+	<hr>
+												<!--HOTEL 5-->
+	<div class="parent-main">
+		<div class="two-child-divs">
+				<img src="C:\Users\Stuti\Desktop\IWP2\r5.jpg" class="small-imgs">
+		</div>
+		<div class="two-child-divs">
+			<p class="page-headings"><u>SKY 61202 City Towers</u></p>
+				<div class="left-child-child-div">
+					<p class="text-inside">City : Vellore</p>
+					<p class="text-inside">Pin code: 632014</p>
+					<p class="text-inside">Country: India</p>
+					<p class="text-inside">(151 Ratings) . Excellent</p>
+					<p class="text-inside">Attached Bathroom&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parking Facility</p>
+					<p class="text-inside">CCTV Cameras&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+5 more</p>
+					<p class="text-inside">Rs. 770 per room per night</p>
+					<input type="submit" value="Book Now" name="Book Now" class="button button1">
+				</div>
+		</div>
+	</div>
+</form>
+	
+</body>

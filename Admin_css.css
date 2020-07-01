@@ -1,0 +1,118 @@
+body{
+  background: url(AdminBack.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+font-family:arial;
+}
+
+@media screen and (max-width:1000px){
+.body,
+.login.
+.login-container
+{
+width:100%;
+text-align:center;
+}
+img{
+margin:auto;
+}
+}
+a.hm
+{
+background-color: transparent;
+color: White;
+font-family:arial;
+font-size: 16px;
+}
+
+a
+{
+  background-color: white;
+  color: black;
+  border: 2px solid #1c18de;
+  padding: 10px 10px;
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 30;
+font-family:arial;
+}
+
+a:hover, a:active {
+  background-color: #1c18de;
+}
+/* Reset top and bottom margins from certain elements */
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.login-header {
+  background: #1c18de;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.login-container {
+  background: #ebebeb;
+  padding: 12px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p {
+  padding: 12px;
+}
+
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  outline: 0;
+  font-size: 0.95em;
+}
+
+.login input[type="email"],.login input[type="text"],
+.login input[type="password"] {
+  background: #fff;
+  border-color: #aba9a2;
+  color: #555;
+}
+
+/* Text fields' focus effect */
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+  border-color: #1c18de;
+  border-width:2px;
+}
+
+.login input[type="submit"] {
+  background: #1c18de;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  align: center;
+  width:100%;
+}
+
+.login input[type="submit"]:hover {
+  background: #17c;
+}
+s
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {
+  border-color: #05a;
+}

@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>Sign Up page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Sign Up Page">
+  	<meta name="keywords" content="HTML,CSS">
+  	<meta name="author" content="Yogita">
+<link rel="stylesheet" href="Reg.css" type="text/css">
+<script src="Reg.js"></script>
+</head>
+<body>
+<div>
+<a href="HomePage (1).html" class="hm" ><b>Home</b></a>
+<span>
+<div class="login">
+  <h2 class="login-header"><b>SIGN UP</b></h2>
+
+  <form class="login-container" name="form">
+    <p><b>First Name *</b><input type="text" placeholder="FirstName" id="nm"></p>
+    <p><b>Last Name *</b><input type="text" placeholder="LastName" id="lm"></p>
+    <p><b>Email *</b><input type="text" placeholder="Email ID" id="em"></p>
+    <p><b>Contact No. *</b><input type="text" placeholder="Contact Number" id="cn"></p>
+    <p><b>Date of Birth *</b><input type="date" id="date"></p>
+ <p><b>Gender *</b>
+<table class="tbl">
+  <tr><td colspan="3"><input type="radio" name="gender" value="male" id="m"><b>Male       </b></td>
+  <td><input type="radio" name="gender" value="female" id="fm"><b>&nbsp&nbsp&nbsp&nbsp&nbspFemale</b></td>
+  <td><input type="radio" name="gender" value="other" id="ot"><b>&nbsp&nbsp&nbsp&nbsp&nbspOther</b></td></tr>
+</table></p>
+<p><b>Address *</b><input type="text" placeholder="Address" id="Add"></p>
+<p><b>City *</b><input type="text" placeholder="City" id="city"></p>
+<p><b>Country *</b>
+<select id="country">
+<option id="c1">Select Country</option>
+<option id="c2">AFGANISTAN</option>
+<option id="c3">BHUTAN</option>
+<option id="c4">CANADA</option>
+<option id="c5">DENMARK</option>
+<option id="c6">EGYPT</option>
+<option id="c7">FRANCE</option>
+<option id="c8">INDIA</option>
+<option id="c9">THAILAND</option>
+<option id="c10">USA</option>
+</select></p>
+<p><b>Pincode *</b><input type="text" placeholder="Pincode" id="pin"></p>
+    <p><b>Password *</b><input type="text" placeholder="Enter New Password" id="pass"></p>
+    <p><b>Confirm Password *<input type="password" placeholder="Re Enter your Password" id="cpass"></p>
+    <p><input type="submit" value="Sign Up" onclick="validate()"></p>
+    <p><input type="reset" value="Reset"></p>
+    <a href="Login_page.html">Return to Login Page</a> 
+    
+  </form>
+</div>
+</span>
+</div>
+</body>
+</html>

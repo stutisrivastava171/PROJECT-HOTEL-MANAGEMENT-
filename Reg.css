@@ -1,0 +1,134 @@
+body{
+  background: url(RegBack.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.login {
+  width: 450px;
+  margin: 16px auto;
+  font-size: 14px;
+font-family:arial;
+}
+
+@media screen and (max-width:1000px){
+.body,
+.login.
+.login-container
+{
+width:100%;
+text-align:center;
+}
+img{
+margin:auto;
+}
+}
+a.hm
+{
+background-color: transparent;
+color: White;
+margin-left: 25px;
+font-family:arial;
+}
+a
+{
+  background-color: white;
+  color: black;
+  border: 2px solid #1c18de;
+  padding: 10px 10px;
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 130;
+  align: center;
+font-family:arial;
+}
+
+a:hover, a:active {
+  background-color: #1c18de;
+}
+/* Reset top and bottom margins from certain elements */
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.login-header {
+  background: #3339FF ;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.login-container {
+  background: #ebebeb;
+  padding: 12px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p {
+  padding: 12px;
+font-family:arial;
+}
+
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 0.1px;
+  border-style: solid;
+  padding: 10px;
+  outline: 0;
+  font-size: 0.95em;
+  font-family:arial;
+}
+.login input[type="email"],.login input[type="text"],
+.login input[type="password"],.login input[type="date"],.login[type="radio"],.login[select]{
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+  font-family:arial;
+}
+.tbl
+{
+background: #fff;
+border-color: #bbb;
+color: #555;
+padding: 6px;
+border-width: 0.1px;
+border-style: solid;
+font-size: 0.95em;
+font-family:arial;
+}
+
+/* Text fields' focus effect */
+.login input[type="email"]:focus,.login input[type="text"]:focus, .login input[type="reset"]:focus,
+.login input[type="password"]:focus {
+  border-color: #1c18de;
+  border-width:2px;
+}
+
+.login input[type="submit"],.login input[type="reset"] {
+  background: #1c18de;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  align: center;
+  width:100%;
+  font-family:arial;
+}
+
+.login input[type="submit"]:hover,.login input[type="reset"]:hover {
+  background: #17c;
+  font-family:arial;
+}
+
+/* Buttons' focus effect */
+.login input[type="submit"]:focus, .login input[type="reset"]:hover {
+  border-color: #aba9a2;
+  font-family:arial;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>booking page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Payment Page">
+  	<meta name="keywords" content="HTML,CSS">
+  	<meta name="author" content="Karan Khayani">
+</head>
+<style type="text/css">
+		body
+		{
+			padding: 0px;
+			margin: 0px;
+			font-family: arial;
+			background-image: url('back4.jpg');
+			background-repeat: no-repeat;
+
+			/*opacity: 0.5;*/
+		}
+		#header
+		{
+			background-color: white;
+			padding: 10px;
+			overflow: auto;
+			display: block;
+			position: sticky;
+			width: auto;
+			box-shadow: 5px 5px 10px rgb(0,0,0,10);
+		}
+		form
+		{
+			text-align:center;
+			padding: 10px;
+			margin: 10px:
+
+		}
+		.input-text
+		{
+			height: 30px;
+			width: 50%;
+			text-align: center;
+			margin: 10px;
+		}
+		h1, h3, h5
+		{
+			color: white;
+		}
+		.button
+			{
+			  background-color: #4CAF50; /* Green */
+			  color: white;
+			  padding: 15px 32px;
+			  text-align: center;
+			  text-decoration: none;
+			  display: inline-block;
+			  font-size: 16px;
+			  margin: 4px 30%;
+			  cursor: pointer;
+			}
+
+			.button1
+			{
+				background-color: white; 
+				color: black; 
+				border: 2px solid #1c18de;
+			}
+			.button1:hover
+			{
+				background-color: #1c18de;
+			}
+			@media only screen and (max-width: 600px) {
+  				parent-div
+  				{
+			   		width: 400px;
+				}
+			}
+		</style>
+<body>
+	<div id="header"><!--HEADER PART-->
+		<a href="#"><p style="float: right;color: black;">&nbsp;&nbsp;&nbsp;Welcome, User</p><img src="C:\Users\Stuti\Desktop\IWP2\img_avatar.png" height="50px" width="50px" style="float: right;"></a>
+	</div>
+	<div style="background-color: rgba(0,0,0,0.5);margin-top: 5%;width: 50%;margin:auto;margin-top: 5%;border: 1px solid grey;">
+		<form>
+			<h1 style="padding: 10px;text-align: center;">Enter booking details</h1>
+
+		<h3 style="text-align: center;">Please enter the follwing details to compelete your booking</h3>
+		<table align="center" style="padding-left: 90px">
+			<tr>
+				<td><h5>Enter number of guests</h5></td>
+				<td width="400px"><input type="text" name="t1" required class="input-text"></td>
+			</tr>
+			<tr>
+				<td><h5>Enter number of rooms</h5></td>
+				<td><input type="text" name="t1" required class="input-text"></td>
+			</tr>
+			<tr>
+				<td><h5>Enter check-in date</h5></td>
+				<td><input type="date" name="t1" required class="input-text"></td>
+			</tr>
+			<tr>
+				<td><h5>Enter check-out date</h5></td>
+				<td><input type="date" name="t1" required class="input-text"></td>
+			</tr>
+			<tr>
+				<td><h5>Enter check-in time</h5></td>
+				<td><input type="time" name="t1" required class="input-text"></td>
+			</tr>
+			<tr>
+				<td><h5>Enter check-out time</h5></td>
+				<td><input type="time" name="t1" required class="input-text"></td>
+			</tr>
+		</table>
+				<br><input type="submit" name="submit" value="Confirm booking" class="button button1">
+		</form>
+	</div>
+</body>
+</html>
